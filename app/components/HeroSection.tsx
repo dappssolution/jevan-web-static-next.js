@@ -41,61 +41,64 @@ const HeroSection: React.FC = () => {
       <div className="z-index-3">
         <div className="container-default z-index-1 w-container">
           <div className="w-layout-grid grid-2-columns _1-2fr---1fr">
-            <motion.div
+            <div
               className={`inner-container _708px ${
                 language === 'ar' ? 'text-right' : 'text-left'
               }`}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
             >
-              <div className="inner-container _550px---mbl">
-                <div className="inner-container _500px---mbl">
-                  <motion.div className="subtitle" variants={textItemVariants}>
-                    {texts.subtitle}
-                  </motion.div>
-                  <motion.h1
-                    className="color-neutral-100"
-                    variants={textItemVariants}
-                  >
-                    {texts.title}
-                  </motion.h1>
-                </div>
-
-                <div className="inner-container _560px _100---tablet">
-                  <motion.p
-                    className="color-neutral-100 mg-bottom-32px mg-bottom-32px---mbp"
-                    variants={textItemVariants}
-                  >
-                    {texts.description}
-                  </motion.p>
-                </div>
-
-                <motion.div className="buttons-row" variants={textItemVariants}>
-                  {/* === Button 1: Browse Services === */}
-                  <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
-                    <Link
-                      href="/services"
-                      className="btn-primary white button-row w-button"
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{}}
+              >
+                <div className="inner-container _550px---mbl">
+                  <div className="inner-container _500px---mbl">
+                    <motion.div className="subtitle" variants={textItemVariants}>
+                      {texts.subtitle}
+                    </motion.div>
+                    <motion.h1
+                      className="color-neutral-100"
+                      variants={textItemVariants}
                     >
-                      {texts.servicesBtn}
-                    </Link>
-                  </motion.div>
+                      {texts.title}
+                    </motion.h1>
+                  </div>
 
-                  {/* === Button 2: Connect Us (WhatsApp) === */}
-                  <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
-                    <a
-                      href={whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-secondary white w-button"
+                  <div className="inner-container _560px _100---tablet">
+                    <motion.p
+                      className="color-neutral-100 mg-bottom-32px mg-bottom-32px---mbp"
+                      variants={textItemVariants}
                     >
-                      {texts.connectBtn}
-                    </a>
+                      {texts.description}
+                    </motion.p>
+                  </div>
+
+                  <motion.div className="buttons-row" variants={textItemVariants}>
+                    {/* === Button 1: Browse Services === */}
+                    <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
+                      <Link
+                        href="/services"
+                        className="btn-primary white button-row w-button"
+                      >
+                        {texts.servicesBtn}
+                      </Link>
+                    </motion.div>
+
+                    {/* === Button 2: Connect Us (WhatsApp) === */}
+                    <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary white w-button"
+                      >
+                        {texts.connectBtn}
+                      </a>
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              </div>
-            </motion.div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

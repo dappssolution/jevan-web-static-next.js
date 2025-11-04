@@ -21,8 +21,9 @@ export default function Home() {
       <StatsSection/>
       <ServicesSection/>
       <AboutUsSection/>
+        <Testimonials/>
       <LocationsSection/>
-      <Testimonials/>
+    
       <CTAv3/>
      </>
   );

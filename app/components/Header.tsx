@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { motion, type Variants } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const navItemVariants: Variants = {
   hover: { 
@@ -56,11 +57,11 @@ const Header: React.FC = () => {
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${shopMessage}`;
 
   return (
-    <div
-      className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-100"
-      style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
-      dir="ltr"
-    >
+      <div
+        className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 bg-black bg-opacity-100 rounded-full shadow-lg mx-2"
+        style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
+        dir="ltr"
+      >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,14 +74,14 @@ const Header: React.FC = () => {
         role="banner"
         className="header-wrapper w-nav"
       >
-        <div className="container-default w-container">
-          <div className="header-content-wrapper">
+        <div className="container-default w-container px-4 py-2 max-w-7xl mx-auto">
+          <div className="header-content-wrapper flex items-center justify-between">
             <Link href="/" passHref className="header-logo-link w-nav-brand">
               <Image
-                src="/logo.png"
+                src="/main-logo.png"
                 alt="Jevan Auto Accessories Logo"
                 className="header-logo w-[50px]"
-                style={{ width: '50px' }}
+                style={{ width: '60px' }}
                 width={150}
                 height={40}
                 priority
@@ -157,10 +158,13 @@ const Header: React.FC = () => {
                       href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary small width-100 w-button"
+                      className="btn-primary small width-100 w-button rounded-full flex items-center justify-center gap-2"
                       onClick={closeMobileMenu}
                     >
-                      {t('nav.getStarted')}
+                      <span className="flex items-center gap-2 justify-center">
+                        <FaWhatsapp size={20} color="#25D366" className="shrink-0" />
+                        {t('nav.getStarted')}
+                      </span>
                     </a>
                   </li>
                 </ul>
@@ -172,9 +176,13 @@ const Header: React.FC = () => {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary small header-white-btn-hidde-on-mb w-button"
+                  className="btn-primary rounded-full small header-white-btn-hidde-on-mb w-button flex items-center justify-center gap-2"
+                  style={{borderRadius: '25px'}}
                 >
-                  Get started
+                  <span className="flex items-center gap-2 justify-center">
+                    <FaWhatsapp size={20} color="#25D366" className="shrink-0" />
+                   
+                  </span>
                 </a>
               </motion.div>
 

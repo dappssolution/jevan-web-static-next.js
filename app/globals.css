@@ -6416,8 +6416,8 @@ figcaption {
 
 .header-wrapper {
   background-color: #0000;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header-content-wrapper {
@@ -9858,8 +9858,8 @@ figcaption {
   }
 
   .header-wrapper {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .header-nav-menu-wrapper {
