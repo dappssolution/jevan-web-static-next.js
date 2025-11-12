@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { motion, type Variants } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 const navItemVariants: Variants = {
   hover: { 
@@ -55,6 +55,8 @@ const Header: React.FC = () => {
     `Hello Jevan Auto Accessories 👋,\n\nI'm interested in your car modification and customization services.\n\nShop Details:\nJevan Auto Accessories\nBest Car Modification in Dubai\nWe specialize in all types of interior and exterior work, offering comprehensive transformations to personalize your vehicle.\n\nPlease share more details or offers.`
   );
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${shopMessage}`;
+  
+  const instagramLink = 'https://www.instagram.com/jevan_auto_accessories?igsh=MTlrMmxyZmtkeWwxYQ%3D%3D&utm_source=qr';
 
   return (
       <div
@@ -152,7 +154,23 @@ const Header: React.FC = () => {
                     <LanguageSwitcher />
                   </div>
 
-                  {/* === Mobile Get Started button === */}
+                  {/* === Mobile Instagram button === */}
+                  <li className="header-nav-list-item show-in-tablet header-button">
+                    <a
+                      href={instagramLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary small width-100 w-button rounded-full flex items-center justify-center gap-2"
+                      onClick={closeMobileMenu}
+                    >
+                      <span className="flex items-center gap-2 justify-center">
+                        <FaInstagram size={20} color="#E4405F" className="shrink-0" />
+                        Instagram
+                      </span>
+                    </a>
+                  </li>
+
+                  {/* === Mobile WhatsApp button === */}
                   <li className="header-nav-list-item show-in-tablet header-button">
                     <a
                       href={whatsappLink}
@@ -170,21 +188,32 @@ const Header: React.FC = () => {
                 </ul>
               </nav>
 
-              {/* === Desktop Get Started button === */}
-              <motion.div whileHover="hover" whileTap="tap">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary rounded-full small header-white-btn-hidde-on-mb w-button flex items-center justify-center gap-2"
-                  style={{borderRadius: '25px'}}
-                >
-                  <span className="flex items-center gap-2 justify-center">
+              {/* === Desktop Instagram + WhatsApp buttons === */}
+              <div className="hidden md:flex items-center gap-2">
+                <motion.div whileHover="hover" whileTap="tap">
+                  <a
+                    href={instagramLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary rounded-full small w-button flex items-center justify-center"
+                    style={{borderRadius: '25px', padding: '10px 16px'}}
+                  >
+                    <FaInstagram size={20} color="#E4405F" className="shrink-0" />
+                  </a>
+                </motion.div>
+                
+                <motion.div whileHover="hover" whileTap="tap">
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary rounded-full small w-button flex items-center justify-center"
+                    style={{borderRadius: '25px', padding: '10px 16px'}}
+                  >
                     <FaWhatsapp size={20} color="#25D366" className="shrink-0" />
-                   
-                  </span>
-                </a>
-              </motion.div>
+                  </a>
+                </motion.div>
+              </div>
 
               {/* === Mobile LanguageSwitcher + Hamburger Menu === */}
               <div className="flex items-center gap-6 md:hidden">
