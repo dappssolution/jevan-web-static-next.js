@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { LanguageProvider, useLanguage } from "./contexts/LanguageContext";
+import WhatsAppStickyButton from "./components/WhatsappStickyBtn";
 
 function BodyWithFont({ children }: { children: React.ReactNode }) {
   const { language } = useLanguage();
@@ -72,6 +73,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <WhatsAppStickyButton />
         </BodyWithFont>
       </LanguageProvider>
     </html>

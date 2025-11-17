@@ -162,7 +162,7 @@ const HeroSection: React.FC = () => {
                   </div>
 
                   <motion.div
-                    className="buttons-row"
+                    className="buttons-row hidden md:flex !hidden md:!flex"
                     variants={textItemVariants}
                   >
                     {/* === Button 1: Browse Services === */}
