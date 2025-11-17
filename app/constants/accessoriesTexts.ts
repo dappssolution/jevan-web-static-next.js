@@ -18,12 +18,6 @@ export const accessoriesTexts = {
         imageAlt: "Front Bumpers and Grilles",
       },
       {
-        id: "9inch-led-lights",
-        name: "9-Inch LED Lights",
-        imageUrl: "/accessories/9inch-led-lights.jpg",
-        imageAlt: "9-Inch LED Lights",
-      },
-      {
         id: "car-care-liquids",
         name: "Car Care Liquids",
         imageUrl: "/accessories/car-care-liquids.jpg",
@@ -53,6 +47,24 @@ export const accessoriesTexts = {
         imageUrl: "/accessories/side-steps.jpg",
         imageAlt: "Side Steps and Footboards",
       },
+      {
+        id: "nano-ceramic-films",
+        name: "Nano Ceramic Tint Films",
+        imageUrl: "/accessories/nano-ceramic-films.jpg",
+        imageAlt: "Nano Ceramic Tint Films",
+      },
+      {
+        id: "car-mobile-accessories",
+        name: "Car Mobile Accessories",
+        imageUrl: "/accessories/car-mobile-accessories.jpg",
+        imageAlt: "Car Mobile Accessories",
+      },
+      {
+        id: "storage-and-offroad-gear",
+        name: "Storage Boxes & Off-Road Gear",
+        imageUrl: "/accessories/storage-and-offroad-gear.jpg",
+        imageAlt: "Storage Boxes and Off-Road Gear",
+      },
     ],
   },
   ar: {
@@ -74,12 +86,6 @@ export const accessoriesTexts = {
         name: "صدامات أمامية وشبكات",
         imageUrl: "/accessories/front-bumpers.jpg",
         imageAlt: "صدامات أمامية وشبكات",
-      },
-      {
-        id: "9inch-led-lights",
-        name: "إنارة LED مقاس 9 إنش",
-        imageUrl: "/accessories/9inch-led-lights.jpg",
-        imageAlt: "إنارة LED مقاس 9 إنش",
       },
       {
         id: "car-care-liquids",
@@ -110,6 +116,24 @@ export const accessoriesTexts = {
         name: "عتبات جانبية",
         imageUrl: "/accessories/side-steps.jpg",
         imageAlt: "عتبات جانبية",
+      },
+      {
+        id: "nano-ceramic-films",
+        name: "أفلام تظليل نانو سيراميك",
+        imageUrl: "/accessories/nano-ceramic-films.jpg",
+        imageAlt: "أفلام تظليل نانو سيراميك",
+      },
+      {
+        id: "car-mobile-accessories",
+        name: "إكسسوارات الهاتف للسيارة",
+        imageUrl: "/accessories/car-mobile-accessories.jpg",
+        imageAlt: "إكسسوارات الهاتف للسيارة",
+      },
+      {
+        id: "storage-and-offroad-gear",
+        name: "صناديق تخزين ومستلزمات الطرق الوعرة",
+        imageUrl: "/accessories/storage-and-offroad-gear.jpg",
+        imageAlt: "صناديق تخزين ومستلزمات الطرق الوعرة",
       },
     ],
   },

@@ -1,20 +1,21 @@
 export const heroSectionTexts = {
   en: {
-    title: "Best Car Modification in Dubai",
-    subtitle: "Jevan Auto Accessories",
+    title: "Modern Makeovers for Outdated Vehicles",
+    subtitle: "Professional Restoration & Custom Upgrades",
     description:
-      "We specialize in all types of interior and exterior work, offering comprehensive transformations to personalize your vehicle.",
+      "We renew old vehicles with refined interiors, sharper exteriors, and tailored modifications.",
     servicesBtn: "Services",
     connectBtn: "Connect Us",
-    shopMessage: `Hello Jevan Auto Accessories 👋,\n\nI'm interested in your car modification and customization services.\n\nShop Details:\nJevan Auto Accessories\nBest Car Modification in Dubai\nWe specialize in all types of interior and exterior work, offering comprehensive transformations to personalize your vehicle.\n\nPlease share more details or offers.`
+    shopMessage: `Hello Jevan Auto Accessories 👋,\n\nI'm interested in your vehicle restoration and custom upgrade services.\n\nPlease share more details.`
   },
+
   ar: {
-    title: "أفضل تعديل للسيارات في دبي",
-    subtitle: "جيفان لتجهيز السيارات",
+    title: "تجديدات حديثة للسيارات القديمة",
+    subtitle: "ترميم احترافي وترقيات مخصصة",
     description:
-      "نحن متخصصون في جميع أنواع الأعمال الداخلية والخارجية، ونقدم تحويلات شاملة لتخصيص سيارتك.",
+      "نجدد السيارات القديمة بترقيات خارجية وداخلية محسّنة وتعديلات احترافية.",
     servicesBtn: "الخدمات",
     connectBtn: "تواصل معنا",
-    shopMessage: `مرحبًا جيفان لتجهيز السيارات 👋،\n\nأنا مهتم بخدمات تعديل وتخصيص السيارات الخاصة بكم.\n\nتفاصيل المتجر:\nجيفان لتجهيز السيارات\nأفضل تعديل للسيارات في دبي\nنحن متخصصون في جميع أنواع الأعمال الداخلية والخارجية، ونقدم تحويلات شاملة لتخصيص سيارتك.\n\nيرجى مشاركة المزيد من التفاصيل أو العروض.`
+    shopMessage: `مرحبًا جيفان لتجهيز السيارات 👋،\n\nأنا مهتم بخدمات الترميم والترقيات المخصصة.\n\nيرجى مشاركة المزيد من التفاصيل.`
   }
 };

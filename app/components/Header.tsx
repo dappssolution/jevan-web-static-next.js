@@ -70,11 +70,11 @@ const Header: React.FC = () => {
 
   return (
       <div
-        className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 rounded-full shadow-lg mx-2 transition-all duration-300"
+        className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 rounded-full mx-2 transition-all duration-300"
         style={{ 
           boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
           backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0, 0, 0, 1)',
-          backdropFilter: isScrolled ? 'blur(20px)' : 'none'
+          backdropFilter: isScrolled ? 'blur(15px)' : 'none'
         }}
         dir="ltr"
       >

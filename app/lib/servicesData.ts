@@ -6,6 +6,7 @@ export type Service = {
   imgAlt: string;
 };
 
+
 export const services: Service[] = [
   {
     slug: "dvd-fixing",
@@ -13,7 +14,7 @@ export const services: Service[] = [
     description:
       "Service and repair for in-car DVD players and entertainment systems to keep them performing smoothly.",
     imgSrc:
-      "https://www.pamperedautocare.com/wp-content/uploads/2017/10/scheduled-car-maintenance-bmw-mercedes-audi-american-cars-luxury-austin-cedar-park-round-rock-1.jpg",
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763351089/2149413372_xspih1.jpg",
     imgAlt: "Car Dashboard DVD Player Repair",
   },
   {
@@ -22,7 +23,7 @@ export const services: Service[] = [
     description:
       "Custom seat covers designed to enhance comfort and give your car’s interior a premium look.",
     imgSrc:
-      "http://shop.barbourhendrickhonda.com/wp-content/uploads/sites/99/2020/03/car-wash-2-e1584115432423.jpg",
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355347/16595_smdjhj.jpg",
     imgAlt: "Custom Car Seat Cover & Upholstery",
   },
   {
@@ -30,7 +31,8 @@ export const services: Service[] = [
     title: "Central Lock",
     description:
       "Central locking repair and installation for enhanced vehicle security and convenience.",
-    imgSrc: "https://www.ecoleauto.com/wp-content/uploads/2023/06/iStock-1387759698.jpg",
+    imgSrc:
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355448/central-lock_ginik3.jpg",
     imgAlt: "Car Central Lock Repair",
   },
   {
@@ -39,7 +41,7 @@ export const services: Service[] = [
     description:
       "Professional installation and fixing of dash, rear, and mirror cameras for better visibility and safety.",
     imgSrc:
-      "https://www.mg.co.uk/sites/default/files/2023-03/iStock-1347150429%201258%20x%20838.jpg",
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356629/2149149644_yo55cy.jpg",
     imgAlt: "Car Reverse and Mirror Camera Installation",
   },
   {
@@ -48,7 +50,7 @@ export const services: Service[] = [
     description:
       "High-quality tinting for UV protection, heat reduction, and improved privacy in all conditions.",
     imgSrc:
-      "https://www.forum-badharzburg.de/wp-content/uploads/2017/09/bigstock-Portrait-of-an-auto-mechanic-a-91601333.jpg",
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356695/2149593827_d2x0or.jpg",
     imgAlt: "Car Window Tinting Service",
   },
   {
@@ -56,7 +58,8 @@ export const services: Service[] = [
     title: "Car Sticker Fixing",
     description:
       "Precision sticker and wrap services to personalize and style your vehicle the way you like.",
-    imgSrc: "https://www.garagedannythibert.com/ressources/images/8e6996bf7047.jpg",
+    imgSrc:
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356806/sticker-fixing_htxvms.jpg",
     imgAlt: "Car Sticker Fixing and Decals",
   },
   {
@@ -64,7 +67,8 @@ export const services: Service[] = [
     title: "Headlight Polishing",
     description:
       "Restore brightness and clarity — remove haze and yellowing for a new-like headlight finish.",
-    imgSrc: "https://siempreauto.com/wp-content/uploads/sites/9/2023/09/shutterstock_2340377479.jpg?w=1200",
+    imgSrc:
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356895/headlight-polishing_v40x7s.jpg",
     imgAlt: "Headlight Polishing Before and After",
   },
   {
@@ -72,7 +76,8 @@ export const services: Service[] = [
     title: "Floor Mat Lamination",
     description:
       "Durable lamination to protect your car’s floor from dust, sand, and spills — easy to clean and long-lasting.",
-    imgSrc: "https://www.endurancewarranty.com/wp-content/uploads/2022/12/average-car-maintenance-cost.jpg",
+    imgSrc:
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356992/mat-laminiation_sud93u.jpg",
     imgAlt: "Car Floor Mat Lamination",
   },
   {
@@ -80,7 +85,8 @@ export const services: Service[] = [
     title: "Mirror Camera Fixing",
     description:
       "Expert fixing and installation of mirror cameras for improved rear and side view clarity.",
-    imgSrc: "https://siempreauto.com/wp-content/uploads/sites/9/2023/09/shutterstock_2340377479.jpg?w=1200",
+    imgSrc:
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357006/mirror-camera_pgbbsu.jpg",
     imgAlt: "Car Mirror Camera Repair",
   },
   {
@@ -89,7 +95,7 @@ export const services: Service[] = [
     description:
       "Installation of advanced navigation systems and infotainment upgrades for smooth and safe drives.",
     imgSrc:
-      "https://media.wired.com/photos/648cf57182d37ced55dff5eb/master/w_2560%2Cc_limit/Massachusetts-Right-To-Repair-Law-vs-US-Govt-Business-1318473654.jpg",
+      "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357088/58616_pqrsxu.jpg",
     imgAlt: "Car Navigation and DVD Installation",
   },
 ];

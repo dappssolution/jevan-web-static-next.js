@@ -76,7 +76,7 @@ const AboutUsSection: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <Image
-                  src="/64d44a7d239aa1639d8553cd/64dd242ebd835d86d6d444f6_engine-image-right-carrepair-x-webflow-template.jpg"
+                  src="https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357836/2149580532_c0bkvt.jpg"
                   loading="eager"
                   priority
                   layout="fill"
