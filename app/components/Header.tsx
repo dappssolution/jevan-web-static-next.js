@@ -70,10 +70,11 @@ const Header: React.FC = () => {
 
   return (
       <div
-        className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 rounded-full mx-2 transition-all duration-300"
+        className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 mx-2 transition-all duration-300 overflow-hidden"
         style={{ 
           backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0, 0, 0, 1)',
-          backdropFilter: isScrolled ? 'blur(15px)' : 'none'
+          backdropFilter: isScrolled ? 'blur(15px)' : 'none',
+          borderRadius: '9999px'
         }}
         dir="ltr"
       >
