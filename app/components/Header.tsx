@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { motion, type Variants } from 'framer-motion';
-import { useLanguage } from '../contexts/LanguageContext';
-import LanguageSwitcher from './LanguageSwitcher';
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { motion, type Variants } from "framer-motion";
+import { useLanguage } from "../contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const navItemVariants: Variants = {
-  hover: { 
-    scale: 1.05, 
-    transition: { 
-      type: "spring" as const, 
-      stiffness: 300 
-    } 
+  hover: {
+    scale: 1.05,
+    transition: {
+      type: "spring" as const,
+      stiffness: 300,
+    },
   },
   tap: { scale: 0.95 },
 };
@@ -44,10 +44,10 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeMobileMenu();
+      if (e.key === "Escape") closeMobileMenu();
     };
-    if (isMobileMenuOpen) document.addEventListener('keydown', onKeyDown);
-    return () => document.removeEventListener('keydown', onKeyDown);
+    if (isMobileMenuOpen) document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
@@ -55,33 +55,34 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // ✅ WhatsApp prefilled message setup
-  const phoneNumber = '971559268787'; // without '+' for WhatsApp API
+  const phoneNumber = "971559268787"; // without '+' for WhatsApp API
   const shopMessage = encodeURIComponent(
     `Hello Jevan Auto Accessories 👋,\n\nI'm interested in your car modification and customization services.\n\nShop Details:\nJevan Auto Accessories\nBest Car Modification in Dubai\nWe specialize in all types of interior and exterior work, offering comprehensive transformations to personalize your vehicle.\n\nPlease share more details or offers.`
   );
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${shopMessage}`;
-  
-  const instagramLink = 'https://www.instagram.com/jevan_auto_accessories?igsh=MTlrMmxyZmtkeWwxYQ%3D%3D&utm_source=qr';
+
+  const instagramLink =
+    "https://www.instagram.com/jevan_auto_accessories?igsh=MTlrMmxyZmtkeWwxYQ%3D%3D&utm_source=qr";
 
   return (
-      <div
-        className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 mx-2 transition-all duration-300"
-        style={{ 
-          backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0, 0, 0, 1)',
-          backdropFilter: isScrolled ? 'blur(15px)' : 'none',
-          borderRadius: '9999px'
-        }}
-        dir="ltr"
-      >
+    <div
+      className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 mx-2 transition-all duration-300"
+      style={{
+        backgroundColor: "rgb(0, 0, 0)",
+        backdropFilter: "none",
+        borderRadius: "9999px",
+      }}
+      dir="ltr"
+    >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         data-animation="default"
         data-collapse="medium"
         data-duration="400"
@@ -97,7 +98,7 @@ const Header: React.FC = () => {
                 src="/main-logo.png"
                 alt="Jevan Auto Accessories Logo"
                 className="header-logo w-[50px]"
-                style={{ width: '60px' }}
+                style={{ width: "60px" }}
                 width={150}
                 height={40}
                 priority
@@ -109,58 +110,74 @@ const Header: React.FC = () => {
                 id="primary-navigation"
                 role="navigation"
                 className={`header-nav-menu-wrapper w-nav-menu ${
-                  isMobileMenuOpen ? 'w--open' : ''
+                  isMobileMenuOpen ? "w--open" : ""
                 }`}
-                style={isMobileMenuOpen ? { height: 'auto', opacity: 1 } : {}}
+                style={isMobileMenuOpen ? { height: "auto", opacity: 1 } : {}}
                 aria-hidden={!isMobileMenuOpen}
-                data-nav-menu-open={isMobileMenuOpen ? 'true' : undefined}
+                data-nav-menu-open={isMobileMenuOpen ? "true" : undefined}
               >
                 <ul role="list" className="header-nav-menu-list">
-                  <motion.li className="header-nav-list-item" whileHover="hover" whileTap="tap">
+                  <motion.li
+                    className="header-nav-list-item"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
                     <Link
                       href="/"
                       className={`header-nav-link white-transparent w-nav-link ${
-                        pathname === '/' ? 'w--current' : ''
+                        pathname === "/" ? "w--current" : ""
                       }`}
                       onClick={closeMobileMenu}
                     >
-                      {t('nav.home')}
+                      {t("nav.home")}
                     </Link>
                   </motion.li>
 
-                  <motion.li className="header-nav-list-item" whileHover="hover" whileTap="tap">
+                  <motion.li
+                    className="header-nav-list-item"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
                     <Link
                       href="/about"
                       className={`header-nav-link white-transparent w-nav-link ${
-                        pathname === '/about' ? 'w--current' : ''
+                        pathname === "/about" ? "w--current" : ""
                       }`}
                       onClick={closeMobileMenu}
                     >
-                      {t('nav.about')}
+                      {t("nav.about")}
                     </Link>
                   </motion.li>
 
-                  <motion.li className="header-nav-list-item" whileHover="hover" whileTap="tap">
+                  <motion.li
+                    className="header-nav-list-item"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
                     <Link
                       href="/services"
                       className={`header-nav-link white-transparent w-nav-link ${
-                        pathname === '/services' ? 'w--current' : ''
+                        pathname === "/services" ? "w--current" : ""
                       }`}
                       onClick={closeMobileMenu}
                     >
-                      {t('nav.services')}
+                      {t("nav.services")}
                     </Link>
                   </motion.li>
 
-                  <motion.li className="header-nav-list-item" whileHover="hover" whileTap="tap">
+                  <motion.li
+                    className="header-nav-list-item"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
                     <Link
                       href="/contact"
                       className={`header-nav-link white-transparent w-nav-link ${
-                        pathname === '/contact' ? 'w--current' : ''
+                        pathname === "/contact" ? "w--current" : ""
                       }`}
                       onClick={closeMobileMenu}
                     >
-                      {t('nav.contact')}
+                      {t("nav.contact")}
                     </Link>
                   </motion.li>
 
@@ -178,7 +195,11 @@ const Header: React.FC = () => {
                       onClick={closeMobileMenu}
                     >
                       <span className="flex items-center gap-2 justify-center">
-                        <FaInstagram size={20} color="#E4405F" className="shrink-0" />
+                        <FaInstagram
+                          size={20}
+                          color="#E4405F"
+                          className="shrink-0"
+                        />
                         Instagram
                       </span>
                     </a>
@@ -194,8 +215,12 @@ const Header: React.FC = () => {
                       onClick={closeMobileMenu}
                     >
                       <span className="flex items-center gap-2 justify-center">
-                        <FaWhatsapp size={20} color="#25D366" className="shrink-0" />
-                        {t('nav.getStarted')}
+                        <FaWhatsapp
+                          size={20}
+                          color="#25D366"
+                          className="shrink-0"
+                        />
+                        {t("nav.getStarted")}
                       </span>
                     </a>
                   </li>
@@ -210,21 +235,29 @@ const Header: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary rounded-full small w-button flex items-center justify-center"
-                    style={{borderRadius: '25px', padding: '10px 16px'}}
+                    style={{ borderRadius: "25px", padding: "10px 16px" }}
                   >
-                    <FaInstagram size={20} color="#E4405F" className="shrink-0" />
+                    <FaInstagram
+                      size={20}
+                      color="#E4405F"
+                      className="shrink-0"
+                    />
                   </a>
                 </motion.div>
-                
+
                 <motion.div whileHover="hover" whileTap="tap">
                   <a
                     href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary rounded-full small w-button flex items-center justify-center"
-                    style={{borderRadius: '25px', padding: '10px 16px'}}
+                    style={{ borderRadius: "25px", padding: "10px 16px" }}
                   >
-                    <FaWhatsapp size={20} color="#25D366" className="shrink-0" />
+                    <FaWhatsapp
+                      size={20}
+                      color="#25D366"
+                      className="shrink-0"
+                    />
                   </a>
                 </motion.div>
               </div>
@@ -235,22 +268,22 @@ const Header: React.FC = () => {
                 <button
                   type="button"
                   className={`hamburger-menu-wrapper w-nav-button ${
-                    isMobileMenuOpen ? 'w--open' : ''
+                    isMobileMenuOpen ? "w--open" : ""
                   }`}
                   onClick={toggleMobileMenu}
-                  aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                  aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                   aria-expanded={isMobileMenuOpen}
                   aria-controls="primary-navigation"
                 >
                   <div className="hamburger-menu-bars-wrapper">
                     <div
                       className={`hamburger-menu-bar top white-transparent ${
-                        isMobileMenuOpen ? 'w--open' : ''
+                        isMobileMenuOpen ? "w--open" : ""
                       }`}
                     ></div>
                     <div
                       className={`hamburger-menu-bar bottom white-transparent ${
-                        isMobileMenuOpen ? 'w--open' : ''
+                        isMobileMenuOpen ? "w--open" : ""
                       }`}
                     ></div>
                   </div>
