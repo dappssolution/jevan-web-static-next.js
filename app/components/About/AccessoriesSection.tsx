@@ -1,7 +1,6 @@
 "use client"
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';

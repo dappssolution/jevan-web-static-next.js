@@ -22,7 +22,6 @@ const navItemVariants: Variants = {
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useLanguage();
   const pathname = usePathname();
 
@@ -50,14 +49,6 @@ const Header: React.FC = () => {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [isMobileMenuOpen]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // ✅ WhatsApp prefilled message setup
   const phoneNumber = "971559268787"; // without '+' for WhatsApp API
@@ -73,9 +64,11 @@ const Header: React.FC = () => {
     <div
       className="fixed top-2 left-2 md:left-10 md:right-10 right-2 z-50 mx-2 transition-all duration-300"
       style={{
-        backgroundColor: "rgb(0, 0, 0)",
-        backdropFilter: "none",
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
         borderRadius: "9999px",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
       }}
       dir="ltr"
     >
