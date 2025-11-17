@@ -56,12 +56,25 @@ export default function LocationSection() {
                       </div>
                     </a>
                     <a
-                      href={`tel:${loc.phone.replace(/\s+/g, '')}`}
+                      href={`tel:${loc.phone1.replace(/\s+/g, '')}`}
                       className="location-link-item white w-inline-block"
                     >
                       <div className="link-text">
                         <div className="text-300 medium text-uppercase">
-                          {loc.phone}
+                          {loc.phone1}
+                        </div>
+                      </div>
+                      <div className="line-rounded-icon link-icon-right mg-left-16px">
+                        &#xe803;
+                      </div>
+                    </a>
+                    <a
+                      href={`tel:${loc.phone2.replace(/\s+/g, '')}`}
+                      className="location-link-item white w-inline-block"
+                    >
+                      <div className="link-text">
+                        <div className="text-300 medium text-uppercase">
+                          {loc.phone2}
                         </div>
                       </div>
                       <div className="line-rounded-icon link-icon-right mg-left-16px">

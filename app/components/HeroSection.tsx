@@ -1,11 +1,11 @@
 "use client";
 
-import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion, type Variants } from 'framer-motion';
-import { heroSectionTexts } from '../constants/heroSectionTexts';
+import React, { useState, useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, type Variants, AnimatePresence } from "framer-motion";
+import { heroSectionTexts } from "../constants/heroSectionTexts";
 
 const textItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -17,24 +17,96 @@ const textItemVariants: Variants = {
 };
 
 const buttonHoverTap: Variants = {
-  hover: { 
-    scale: 1.05, 
-    transition: { 
-      type: "spring" as const, 
-      stiffness: 300 
-    } 
+  hover: {
+    scale: 1.05,
+    transition: {
+      type: "spring" as const,
+      stiffness: 300,
+    },
   },
   tap: { scale: 0.95 },
+};
+
+const titleContainerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const titleWordVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    filter: "blur(10px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// Slide animation variants
+const slideVariants: Variants = {
+  enter: {
+    x: "100%",
+    opacity: 0,
+  },
+  center: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { type: "spring", stiffness: 300, damping: 30 },
+      opacity: { duration: 0.5 },
+    },
+  },
+  exit: {
+    x: "-100%",
+    opacity: 0,
+    transition: {
+      x: { type: "spring", stiffness: 300, damping: 30 },
+      opacity: { duration: 0.5 },
+    },
+  },
 };
 
 const HeroSection: React.FC = () => {
   const { language } = useLanguage();
   const texts = heroSectionTexts[language] || heroSectionTexts.en;
 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    "/64d44a7d239aa1639d8553cd/64f7bff8e4e160feca4a76eb_image-left-home-v3-carrepair-x-webflow-template.png",
+    "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763366202/patrol_ry5gtv.png",
+    "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763366331/LC_cfdkns.png",
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   // WhatsApp prefilled message setup
-  const phoneNumber = '971559268787'; // without '+'
+  const phoneNumber = "971559268787";
   const shopMessage = encodeURIComponent(texts.shopMessage);
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${shopMessage}`;
+
+  const titleWords = texts.title.split(" ");
 
   return (
     <section className="section hero v3" dir="ltr">
@@ -43,24 +115,38 @@ const HeroSection: React.FC = () => {
           <div className="w-layout-grid grid-2-columns _1-2fr---1fr">
             <div
               className={`inner-container _708px ${
-                language === 'ar' ? 'text-right' : 'text-left'
+                language === "ar" ? "text-right" : "text-left"
               }`}
             >
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={{}}
-              >
+              <motion.div initial="hidden" animate="visible" variants={{}}>
                 <div className="inner-container _550px---mbl">
                   <div className="inner-container _500px---mbl">
-                    <motion.div className="subtitle" variants={textItemVariants}>
-                      {texts.subtitle}
-                    </motion.div>
-                    <motion.h1
-                      className="color-neutral-100"
+                    <motion.div
+                      className="subtitle"
                       variants={textItemVariants}
                     >
-                      {texts.title}
+                      {texts.subtitle}
+                    </motion.div>
+
+                    {/* Animated Title */}
+                    <motion.h1
+                      className="color-neutral-100"
+                      initial="hidden"
+                      animate="visible"
+                      variants={titleContainerVariants}
+                    >
+                      {titleWords.map((word, index) => (
+                        <motion.span
+                          key={index}
+                          variants={titleWordVariants}
+                          style={{
+                            display: "inline-block",
+                            marginRight: "0.3em",
+                          }}
+                        >
+                          {word}
+                        </motion.span>
+                      ))}
                     </motion.h1>
                   </div>
 
@@ -73,9 +159,16 @@ const HeroSection: React.FC = () => {
                     </motion.p>
                   </div>
 
-                  <motion.div className="buttons-row" variants={textItemVariants}>
+                  <motion.div
+                    className="buttons-row"
+                    variants={textItemVariants}
+                  >
                     {/* === Button 1: Browse Services === */}
-                    <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
+                    <motion.div
+                      whileHover="hover"
+                      whileTap="tap"
+                      variants={buttonHoverTap}
+                    >
                       <Link
                         href="/services"
                         className="btn-primary white button-row w-button"
@@ -85,7 +178,11 @@ const HeroSection: React.FC = () => {
                     </motion.div>
 
                     {/* === Button 2: Connect Us (WhatsApp) === */}
-                    <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
+                    <motion.div
+                      whileHover="hover"
+                      whileTap="tap"
+                      variants={buttonHoverTap}
+                    >
                       <a
                         href={whatsappLink}
                         target="_blank"
@@ -103,25 +200,30 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* === Right Image Section === */}
-      <motion.div
-        className="hero-v3-full-image-right"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.0, delay: 0.3, ease: 'easeOut' }}
-        viewport={{ once: true }}
-      >
-        <Image
-          src="/64d44a7d239aa1639d8553cd/64f7bff8e4e160feca4a76eb_image-left-home-v3-carrepair-x-webflow-template.png"
-          alt="Auto Maintenance, Service & Repair"
-          width={920}
-          height={800}
-          priority
-          className="_w-h-100 fit-cover home-v3-full-image-right-position"
-          sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 98vw, 51vw"
-        />
+      {/* === Right Image Section with Slider === */}
+      <div className="hero-v3-full-image-right" style={{ overflow: "hidden" }}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            style={{ width: "100%", height: "100%" }}
+          >
+            <Image
+              src={images[currentImageIndex]}
+              alt="Auto Maintenance, Service & Repair"
+              fill
+              priority
+              className="_w-h-100 fit-cover home-v3-full-image-right-position"
+              sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 98vw, 51vw"
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="position-absolute bg-shadow-gradient-overlay hero-v3"></div>
-      </motion.div>
+      </div>
 
       <div className="position-absolute bottom hero-v3-bottom">
         <div className="decoration-section-shape left hero-v3"></div>
