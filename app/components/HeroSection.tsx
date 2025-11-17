@@ -87,9 +87,10 @@ const HeroSection: React.FC = () => {
 
   const images = [
     "/64d44a7d239aa1639d8553cd/64f7bff8e4e160feca4a76eb_image-left-home-v3-carrepair-x-webflow-template.png",
+    "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763373732/car_2_oysyiz.png",
     "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763366202/patrol_ry5gtv.png",
     "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763366331/LC_cfdkns.png",
-    "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763370546/car_1_lovxlm.png"
+    "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763370546/car_1_lovxlm.png",
   ];
 
   useEffect(() => {

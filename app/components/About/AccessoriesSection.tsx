@@ -42,12 +42,12 @@ const AccessoriesSection: React.FC = () => {
   const texts = accessoriesTexts[language] || accessoriesTexts.en;
 
   return (
-    <section className="relative py-32 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <motion.div
-            className="mb-16"
+            className="mb-12 md:mb-16"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -56,16 +56,16 @@ const AccessoriesSection: React.FC = () => {
             <div className="text-center lg:text-left">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
                 <motion.div
-                  className="max-w-3xl"
+                  className="max-w-3xl mx-auto lg:mx-0"
                   variants={itemVariants}
                 >
                   <div className="text-sm font-semibold text-primary-500 uppercase tracking-wider mb-4">
                     {texts.subtitle}
                   </div>
-                  <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                     {texts.title}
                   </h2>
-                  <p className="text-lg text-gray-600">
+                  <p className="text-base sm:text-lg text-gray-600">
                     {texts.description}
                   </p>
                 </motion.div>
@@ -80,7 +80,7 @@ const AccessoriesSection: React.FC = () => {
 
           {/* Accessories Grid */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -94,23 +94,27 @@ const AccessoriesSection: React.FC = () => {
                   y: -8,
                   transition: { duration: 0.3, ease: 'easeOut' }
                 }}
-                className="group"
+                className="group w-full"
               >
+                <div className="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                   {/* Image Section */}
-                  <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
-                    <img
+                  <div className="relative w-full h-64 sm:h-72 md:h-80 bg-gray-100 overflow-hidden">
+                    <Image
                       src={accessory.imageUrl}
                       alt={accessory.imageAlt}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                       {accessory.name}
                     </h3>
                   </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>

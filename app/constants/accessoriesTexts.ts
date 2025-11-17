@@ -8,7 +8,7 @@ export const accessoriesTexts = {
       {
         id: "steering-wheels",
         name: "Premium Steering Wheels",
-        imageUrl: "/accessories/steering-wheels.jpg",
+        imageUrl: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763373971/steering-wheels_uo8ece.jpg",
         imageAlt: "Premium Steering Wheels",
       },
       {
@@ -78,7 +78,7 @@ export const accessoriesTexts = {
       {
         id: "steering-wheels",
         name: "عجلات قيادة فاخرة",
-        imageUrl: "/accessories/steering-wheels.jpg",
+        imageUrl: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763373971/steering-wheels_uo8ece.jpg",
         imageAlt: "عجلات قيادة فاخرة",
       },
       {
