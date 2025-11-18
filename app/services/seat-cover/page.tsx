@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { serviceDetailsTexts } from "@/app/constants/serviceDetailsTexts";
 
-const DVDRepairPage = () => {
+const SeatCoverPage = () => {
   const { language } = useLanguage();
-  const texts = serviceDetailsTexts[language].dvdFixing;
+  const texts = serviceDetailsTexts[language].seatCover;
 
   const sectionAnimation = {
     initial: { opacity: 0, y: 50 },
@@ -23,7 +23,10 @@ const DVDRepairPage = () => {
       {/* HEADER SECTION */}
       <section className="py-24">
         <div className="container-default w-container">
-          <motion.div {...sectionAnimation} className="text-center max-w-2xl mx-auto">
+          <motion.div
+            {...sectionAnimation}
+            className="text-center max-w-2xl mx-auto"
+          >
             <h1 className="heading-h1-size">{texts.title}</h1>
             <p className="mt-4 text-neutral-600 leading-relaxed">{texts.intro}</p>
           </motion.div>
@@ -31,11 +34,11 @@ const DVDRepairPage = () => {
           {/* MAIN IMAGE */}
           <motion.div {...sectionAnimation} className="mt-12">
             <Image
-              src="https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763351089/2149413372_xspih1.jpg"
+              src="https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355347/16595_smdjhj.jpg"
               alt={texts.title}
               width={1100}
               height={600}
-              className="rounded-xl shadow-lg w-full object-cover"
+              className="rounded-lg shadow-lg w-full object-cover"
             />
           </motion.div>
         </div>
@@ -44,32 +47,21 @@ const DVDRepairPage = () => {
       {/* ABOUT SECTION */}
       <section className="py-20 bg-white">
         <div className="container-default w-container">
-          <motion.div {...sectionAnimation} className="max-w-2xl mx-auto rich-text-v2 w-richtext">
+          <motion.div
+            {...sectionAnimation}
+            className="max-w-2xl mx-auto rich-text-v2 w-richtext"
+          >
             <h2>{texts.aboutTitle}</h2>
             <p>{texts.aboutText}</p>
 
             <h3>{texts.includedTitle}</h3>
             <ul>
-              <li>✔ DVD Player installation & configuration</li>
-              <li>✔ Screen calibration & HDMI setup</li>
-              <li>✔ Electrical wiring safety check</li>
-              <li>✔ Software reset / system update (if supported)</li>
-              <li>✔ Roof-mounted or headrest screen installation</li>
+              <li>✔ Premium Leather</li>
+              <li>✔ Soft Fabric</li>
+              <li>✔ Sporty PU Leather</li>
+              <li>✔ Custom Stitching Options</li>
+              <li>✔ Dual-tone Premium Finishes</li>
             </ul>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container-default w-container">
-          <motion.div {...sectionAnimation}>
-            <Image
-              src="https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763456440/2148925544_s8q0sm.jpg"
-              alt="DVD Installation Process"
-              width={1100}
-              height={600}
-              className="rounded-lg shadow-lg w-full object-cover"
-            />
           </motion.div>
         </div>
       </section>
@@ -79,7 +71,9 @@ const DVDRepairPage = () => {
         <div className="container-default w-container text-center max-w-2xl mx-auto">
           <motion.div {...sectionAnimation}>
             <h2 className="text-4xl font-bold mb-4">{texts.ctaTitle}</h2>
-            <p className="text-neutral-600 mb-8 leading-relaxed">{texts.ctaText}</p>
+            <p className="text-neutral-600 mb-8 leading-relaxed">
+              {texts.ctaText}
+            </p>
 
             <Link
               href="/contact"
@@ -94,4 +88,4 @@ const DVDRepairPage = () => {
   );
 };
 
-export default DVDRepairPage;
+export default SeatCoverPage;

@@ -1,91 +1,99 @@
 export const serviceSectionTexts = {
   en: {
-    subtitle: "Our services",
-    title: "We have a wide range of services",
+    subtitle: "Our Services",
+    title: "We Offer Premium Automotive Solutions",
     description:
-      "We offer professional car care and enhancement services designed to improve your vehicle’s comfort, safety, and appearance. Our skilled technicians ensure high-quality results for every service.",
-    viewDetail: "View Detail",
+      "From safety upgrades to interior enhancement — we provide professional car services with quality, reliability, and precision.",
+    viewDetail: "View Details",
     bgText: "services",
     services: [
       {
         number: "01",
         title: "DVD Fixing",
         description:
-          "Professional DVD player installation and repair services for your car. Enjoy seamless in-car entertainment for passengers and families.",
-        href: "/services/maintenance",
-        alt: "Car Maintenance Service",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763351089/2149413372_xspih1.jpg",
+          "Installation and repair of car DVD and infotainment systems for smooth in-car entertainment.",
+        href: "/services/dvd-fixing",
+        alt: "Car DVD Repair Service",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763351089/2149413372_xspih1.jpg",
       },
       {
         number: "02",
         title: "Seat Cover",
         description:
-          "High-quality seat cover installation to protect and style your car’s interior. Choose from a variety of materials and designs to match your taste and comfort.",
-        href: "/services/wheels",
-        alt: "Custom Wheel Services",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355347/16595_smdjhj.jpg",
+          "Premium seat cover installation with high-quality materials for comfort and styling.",
+        href: "/services/seat-cover",
+        alt: "Car Seat Cover Installation",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355347/16595_smdjhj.jpg",
       },
       {
         number: "03",
         title: "Central Lock",
         description:
-          "Reliable central locking system installation and repair to enhance your car’s security and convenience. Suitable for all car models.",
-        href: "/services/alignment",
-        alt: "Wheel Alignment Service",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355448/central-lock_ginik3.jpg",
+          "Installation and repair of central locking systems for enhanced security and convenience.",
+        href: "/services/central-lock",
+        alt: "Central Lock System Service",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355448/central-lock_ginik3.jpg",
       },
       {
         number: "04",
         title: "Camera Fixing",
         description:
-          "Expert installation of front and rear cameras for improved parking safety and visibility. Stay confident and protected with clear camera views while driving.",
-        href: "/services/powder-coating",
-        alt: "Powder Coating Service",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356629/2149149644_yo55cy.jpg",
+          "Front, rear, and mirror camera installation for better visibility & safer parking.",
+        href: "/services/camera-fixing",
+        alt: "Car Camera Installation",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356629/2149149644_yo55cy.jpg",
       },
       {
         number: "05",
         title: "Window Tinting",
         description:
-          "Premium window tinting service to reduce heat, protect from UV rays, and enhance privacy. Durable and stylish film options available.",
-        href: "/services/brakes",
-        alt: "Brake Service and Repair",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356695/2149593827_d2x0or.jpg",
+          "UV protection, heat reduction & privacy with high-quality window tinting films.",
+        href: "/services/window-tinting",
+        alt: "Car Window Tinting Service",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356695/2149593827_d2x0or.jpg",
       },
       {
         number: "06",
         title: "Car Sticker Fixing",
         description:
-          "Custom car sticker design and installation services. Add a personal or business touch with high-quality, weather-resistant stickers.",
-        href: "/services/engine-service",
-        alt: "Engine Service and Repair",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356806/sticker-fixing_htxvms.jpg",
+          "Custom vehicle stickers & decals for branding, personalization & style.",
+        href: "/services/car-sticker-fixing",
+        alt: "Car Sticker Installation",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356806/sticker-fixing_htxvms.jpg",
       },
       {
         number: "07",
         title: "Headlight Polishing",
         description:
-          "Professional headlight restoration and polishing to improve brightness and visibility. Restore your car’s shine and safety.",
+          "Restore faded headlights — improve visibility, safety & appearance.",
         href: "/services/headlight-polishing",
-        alt: "Headlight Polishing Service",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356895/headlight-polishing_v40x7s.jpg",
+        alt: "Headlight Restoration Service",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356895/headlight-polishing_v40x7s.jpg",
       },
       {
         number: "08",
         title: "Floor Mat Lamination",
         description:
-          "Durable floor mat lamination to protect your car’s interior from dirt, spills, and wear. Easy to clean and long-lasting finish.",
+          "High-durability laminated floor mats that protect against dust, spills, and wear.",
         href: "/services/floor-mat-lamination",
-        alt: "Floor Mat Lamination Service",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356992/mat-laminiation_sud93u.jpg",
+        alt: "Car Floor Mat Lamination",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356992/mat-laminiation_sud93u.jpg",
       },
       {
         number: "09",
         title: "Mirror Camera Fixing",
         description:
-          "Smart mirror camera installation for better visibility and safety. Upgrade your vehicle with advanced monitoring technology.",
+          "Complete mirror camera setups for added visibility and smart driving assistance.",
         href: "/services/mirror-camera-fixing",
-        alt: "Mirror Camera Fixing Service",
+        alt: "Mirror Camera Installation",
         imgSrc:
           "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357006/mirror-camera_pgbbsu.jpg",
       },
@@ -93,93 +101,100 @@ export const serviceSectionTexts = {
         number: "10",
         title: "Navigation Installation",
         description:
-          "GPS navigation system installation for real-time driving assistance. Stay on track with advanced and accurate navigation systems.",
+          "GPS navigation systems with real-time tracking and seamless route guidance.",
         href: "/services/navigation-installation",
-        alt: "Navigation Installation Service",
+        alt: "GPS Navigation Setup",
         imgSrc:
           "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357088/58616_pqrsxu.jpg",
       },
-      
     ],
   },
   ar: {
     subtitle: "خدماتنا",
-    title: "لدينا مجموعة واسعة من الخدمات",
+    title: "نقدم حلولاً احترافية للسيارات",
     description:
-      "نقدم خدمات احترافية للعناية بالسيارات وتحسينها لضمان الراحة والأمان والمظهر الجذاب لسيارتك. فنيوّنا المهرة يقدمون نتائج عالية الجودة في كل خدمة.",
+      "نوفّر خدمات متكاملة للعناية بالسيارات وتعزيز الراحة والأمان والمظهر الجمالي. يعمل فريقنا باحترافية عالية لضمان جودة وموثوقية كل خدمة.",
     viewDetail: "عرض التفاصيل",
     bgText: "الخدمات",
+
     services: [
       {
         number: "01",
         title: "إصلاح مشغل الـ DVD",
         description:
-          "خدمة تركيب وإصلاح أجهزة تشغيل الـ DVD في السيارات باحترافية. استمتع بترفيه داخل السيارة بجودة عالية ومناسبة لجميع أفراد العائلة.",
-        href: "/services/maintenance",
-        alt: "خدمة صيانة السيارات",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763351089/2149413372_xspih1.jpg",
+          "تركيب وصيانة أنظمة الترفيه وشاشات الـ DVD داخل السيارة لضمان تجربة قيادة ممتعة وسلسة.",
+        href: "/services/dvd-fixing",
+        alt: "خدمة إصلاح مشغل DVD للسيارات",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763351089/2149413372_xspih1.jpg",
       },
       {
         number: "02",
         title: "تغطية المقاعد",
         description:
-          "تركيب أغطية مقاعد عالية الجودة لحماية وتجميل داخلية السيارة. نوفر تصاميم وخامات متنوعة تناسب جميع الأذواق.",
-        href: "/services/wheels",
-        alt: "خدمات العجلات المخصصة",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355347/16595_smdjhj.jpg",
+          "تركيب أغطية مقاعد عالية الجودة بخامات مريحة ومتنوعة لحماية وتجميل داخلية سيارتك.",
+        href: "/services/seat-cover",
+        alt: "خدمة تركيب أغطية المقاعد",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355347/16595_smdjhj.jpg",
       },
       {
         number: "03",
         title: "القفل المركزي",
         description:
-          "تركيب وصيانة أنظمة القفل المركزي لزيادة أمان وراحة السيارة. نستخدم تقنيات حديثة تناسب جميع أنواع السيارات.",
-        href: "/services/alignment",
-        alt: "خدمة وزن الأذرعة",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355448/central-lock_ginik3.jpg",
+          "تركيب وإصلاح نظام القفل المركزي لتعزيز أمان السيارة وتسهيل تجربة الاستخدام.",
+        href: "/services/central-lock",
+        alt: "خدمة القفل المركزي للسيارات",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763355448/central-lock_ginik3.jpg",
       },
       {
         number: "04",
         title: "تركيب الكاميرا",
         description:
-          "خدمة تركيب الكاميرات الأمامية والخلفية بدقة عالية لتحسين الرؤية أثناء الركن والقيادة. حافظ على سلامتك بثقة أكبر.",
-        href: "/services/powder-coating",
-        alt: "خدمة طلاء البودرة",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356629/2149149644_yo55cy.jpg",
+          "تركيب كاميرات أمامية وخلفية وكاميرات المرايا لزيادة الأمان وتحسين الرؤية أثناء الركن والقيادة.",
+        href: "/services/camera-fixing",
+        alt: "خدمة تركيب كاميرات السيارات",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356629/2149149644_yo55cy.jpg",
       },
       {
         number: "05",
         title: "تظليل النوافذ",
         description:
-          "خدمة تظليل النوافذ بجودة عالية لتقليل الحرارة وحماية من الأشعة فوق البنفسجية وزيادة الخصوصية. نستخدم أفلام تظليل متينة ومتوافقة مع القوانين المحلية.",
-        href: "/services/brakes",
-        alt: "خدمة وإصلاح الفرامل",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356695/2149593827_d2x0or.jpg",
+          "تظليل احترافي للنوافذ لتقليل أشعة الشمس والحرارة وتحسين الخصوصية داخل السيارة.",
+        href: "/services/window-tinting",
+        alt: "خدمة تظليل نوافذ السيارة",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356695/2149593827_d2x0or.jpg",
       },
       {
         number: "06",
         title: "تركيب ملصقات السيارات",
         description:
-          "خدمة تصميم وتركيب ملصقات السيارات الاحترافية. أضف لمسة شخصية أو تجارية لسيارتك بملصقات مقاومة للعوامل الجوية.",
-        href: "/services/engine-service",
-        alt: "خدمة وصيانة المحرك",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356806/sticker-fixing_htxvms.jpg",
+          "تصميم وتركيب ملصقات وتغليفات احترافية لإضافة لمسة جمالية أو تجارية لسيارتك.",
+        href: "/services/car-sticker-fixing",
+        alt: "خدمة ملصقات السيارات",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356806/sticker-fixing_htxvms.jpg",
       },
       {
         number: "07",
         title: "تلميع المصابيح الأمامية",
         description:
-          "خدمة تلميع وترميم المصابيح الأمامية لتحسين الإضاءة والرؤية الليلية. أعد لسيارتك بريقها وزد من مستوى الأمان.",
+          "استعادة لمعان المصابيح الأمامية لتحسين الرؤية الليلية والمظهر العام للسيارة.",
         href: "/services/headlight-polishing",
-        alt: "خدمة تلميع المصابيح",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356895/headlight-polishing_v40x7s.jpg",
+        alt: "خدمة تلميع المصابيح الأمامية",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356895/headlight-polishing_v40x7s.jpg",
       },
       {
         number: "08",
-        title: "تغليف أرضيات السيارة",
+        title: "تغليف الأرضيات",
         description:
-          "خدمة تغليف سجاد وأرضيات السيارة لحمايتها من الأوساخ والسوائل. متينة وسهلة التنظيف وتناسب جميع الطرازات.",
+          "تغليف متين لسجاد السيارة لحمايته من الأوساخ والبلل والتآكل — سهل التنظيف وطويل الأمد.",
         href: "/services/floor-mat-lamination",
-        alt: "خدمة تغليف أرضيات السيارات",
+        alt: "خدمة تغليف أرضيات السيارة",
         imgSrc:
           "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763356992/mat-laminiation_sud93u.jpg",
       },
@@ -187,19 +202,21 @@ export const serviceSectionTexts = {
         number: "09",
         title: "تركيب كاميرا المرايا",
         description:
-          "تركيب كاميرا مرايا ذكية لتحسين الرؤية الأمامية والخلفية. ترقية سيارتك بتقنيات أمان حديثة لقيادة أكثر أمانًا.",
+          "تركيب كاميرات مرايا ذكية لزيادة الرؤية الجانبية والخلفية ودعم القيادة الآمنة.",
         href: "/services/mirror-camera-fixing",
-        alt: "خدمة تركيب كاميرا المرايا",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357006/mirror-camera_pgbbsu.jpg",
+        alt: "خدمة تركيب كاميرا المرايا الذكية",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357006/mirror-camera_pgbbsu.jpg",
       },
       {
         number: "10",
         title: "تركيب نظام الملاحة",
         description:
-          "تركيب أنظمة الملاحة GPS لقيادة دقيقة وآمنة. استمتع بتوجيهات فورية واتصال دائم أثناء القيادة.",
+          "أنظمة ملاحة GPS متطورة مع توجيه فوري ومعلومات حركة المرور في الوقت الحقيقي.",
         href: "/services/navigation-installation",
-        alt: "خدمة تركيب نظام الملاحة",
-        imgSrc: "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357088/58616_pqrsxu.jpg",
+        alt: "خدمة تركيب نظام الملاحة GPS",
+        imgSrc:
+          "https://res.cloudinary.com/dk9i6oh5y/image/upload/v1763357088/58616_pqrsxu.jpg",
       },
     ],
   },
