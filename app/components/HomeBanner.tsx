@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../../contexts/LanguageContext';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, type Variants, AnimatePresence } from 'framer-motion';
-import { aboutBannerTexts } from '../../constants/aboutBannerTexts';
+import { useLanguage } from '../contexts/LanguageContext';
+import { homeBannerTexts } from '../constants/homeBannerTexts';
 
 const textItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -63,9 +63,9 @@ const imageVariants: Variants = {
   },
 };
 
-const AboutBanner: React.FC = () => {
+const HomeBanner: React.FC = () => {
   const { language } = useLanguage();
-  const texts = aboutBannerTexts[language] || aboutBannerTexts.en;
+  const texts = homeBannerTexts[language] || homeBannerTexts.en;
   const phoneNumber = '971559268787'; // without '+'
   const shopMessage = encodeURIComponent(texts.shopMessage);
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${shopMessage}`;
@@ -83,7 +83,7 @@ const AboutBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -124,17 +124,17 @@ const AboutBanner: React.FC = () => {
                 </div>
 
                 <motion.div className="buttons-row button-row-hide-mobile" variants={textItemVariants}>
-                  {/* === Button 1: Learn More === */}
+                  {/* === Button 1: Explore Services === */}
                   <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
                     <Link
-                      href="/contact"
+                      href="/services"
                       className="btn-primary white button-row w-button"
                     >
                       {texts.learnMoreBtn}
                     </Link>
                   </motion.div>
 
-                  {/* === Button 2: Connect Us (WhatsApp) === */}
+                  {/* === Button 2: Get Quote (WhatsApp) === */}
                   <motion.div whileHover="hover" whileTap="tap" variants={buttonHoverTap}>
                     <a
                       href={whatsappLink}
@@ -164,7 +164,7 @@ const AboutBanner: React.FC = () => {
           >
             <Image
               src={images[currentImageIndex]}
-              alt={`About Jevan Auto Accessories ${currentImageIndex + 1}`}
+              alt={`Jevan Auto Accessories ${currentImageIndex + 1}`}
               width={920}
               height={800}
               priority={currentImageIndex === 0}
@@ -211,4 +211,4 @@ const AboutBanner: React.FC = () => {
   );
 };
 
-export default AboutBanner;
+export default HomeBanner;

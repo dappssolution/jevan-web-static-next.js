@@ -90,7 +90,7 @@ const TeamSection: React.FC = () => {
                     <div className="z-index-1">
                       <div>
                         <h3 className="card-white-title display-3 mg-bottom-16px">
-                          {member.name}
+                          {/* {member.name} */}
                         </h3>
                         <div className="text-100 medium text-uppercase">
                           {member.role}

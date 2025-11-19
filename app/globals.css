@@ -13558,3 +13558,15 @@ figcaption {
 .cta-section:hover .decoration-section-shape.right {
   transform: translateX(10px);
 }
+
+@media screen and (max-width: 767px) {
+  .button-row-hide-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-row-hide-mobile {
+    display: flex !important;
+  }
+}
