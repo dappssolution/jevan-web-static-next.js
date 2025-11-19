@@ -67,8 +67,7 @@ const Testimonials: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="buttons-row right left-tablet">
-              {/* WhatsApp integration */}
+            {/* <div className="buttons-row right left-tablet">
               <a
                 href={whatsappLink}
                 className="btn-primary white w-button"
@@ -77,7 +76,7 @@ const Testimonials: React.FC = () => {
               >
                 {texts.scheduleBtn}
               </a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 

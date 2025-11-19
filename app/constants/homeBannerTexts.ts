@@ -1,4 +1,4 @@
-export const heroSectionTexts = {
+export const homeBannerTexts = {
   en: {
     title: "Modern Makeovers for Outdated Vehicles",
     subtitle: "Professional Restoration & Custom Upgrades",
